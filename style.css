@@ -1,0 +1,58 @@
+/* Reset some defaults */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Full-page background */
+body {
+  background: url("your-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Logo box (top-left) */
+.logo-box {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+.logo-box img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Main translucent box */
+.main-box {
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+  margin-bottom: 20px;
+}
+.nav-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Inner content boxes */
+.content-box {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
