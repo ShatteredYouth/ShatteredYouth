@@ -89,3 +89,29 @@ body {
   color: red;
 }
 
+.nav-links {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links .view-label {
+  color: black;
+  margin-right: 10px;
+}
+
+.nav-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: red; /* hover color */
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+  color: red; /* highlight current page */
+}
