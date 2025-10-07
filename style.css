@@ -1,36 +1,38 @@
-/* Reset some defaults */
-body, html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
 }
 
-/* Full-page background */
+/* Full background image */
 body {
-  background: url("Images/another attempt.jpeg") no-repeat center center fixed;
+  background-image: url("your-background.jpg");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Logo box (top-left) */
+/* Logo box */
 .logo-box {
   position: fixed;
   top: 20px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 10px 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
   border-radius: 8px;
+  z-index: 10;
 }
 .logo-box img {
-  max-width: 100px;
+  width: 100px;
   height: auto;
 }
 
-/* Main translucent box */
+/* Main content box */
 .main-box {
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   max-width: 900px;
-  margin: 100px auto;
+  margin: 120px auto;
   padding: 20px;
   border-radius: 10px;
 }
@@ -41,18 +43,17 @@ body {
 }
 .nav-links a {
   margin-right: 20px;
-  text-decoration: none;
   color: black;
   font-weight: bold;
+  text-decoration: none;
 }
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Inner content boxes */
+/* Inner content box */
 .content-box {
-  background: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 15px;
-  margin-bottom: 20px;
   border-radius: 8px;
 }
