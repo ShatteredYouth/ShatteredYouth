@@ -206,3 +206,98 @@ a:hover {
   margin-top: 5px;
   font-size: 0.95rem;
 }
+ /* Music Review Page Styles */
+body.music-review-page {
+  background-image: url('crowd.jpg'); /* same as main page */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Page container */
+.music-review-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.5in; /* keeps side gaps */
+  min-height: 100vh;
+}
+
+/* Big white card */
+.music-main-card {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255,255,255,0.75);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 90vh; /* fills most of page height */
+}
+
+/* Top row: logo */
+.music-top-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-logo-img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Review row: three vertical boxes */
+.music-review-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Individual review box */
+.music-review-box {
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 15px;
+  flex: 1 1 250px; /* equal width min 250px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* Album image */
+.music-album-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Review text */
+.music-review-text h4 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.music-review-text p {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Responsive: stack reviews on smaller screens */
+@media (max-width: 900px) {
+  .music-review-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .music-review-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
