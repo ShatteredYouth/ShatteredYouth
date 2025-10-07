@@ -115,3 +115,101 @@ body {
   text-decoration: underline;
   color: red; /* highlight current page */
 }
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: url("your-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+  padding: 40px 0;
+}
+
+/* Header title */
+.site-title {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin: 0 auto 20px;
+  font-size: 1.2rem;
+}
+.site-title h1 {
+  font-family: "Times New Roman", cursive;
+  font-weight: normal;
+}
+
+/* Main translucent content box */
+.main-box {
+  background: rgba(255, 255, 255, 0.5);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 5px;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Reviews layout */
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Each review card */
+.review-card {
+  background: rgba(255, 255, 255, 0.75);
+  width: 30%;
+  min-width: 250px;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.review-card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+  .review-card {
+    width: 80%;
+  }
+}
