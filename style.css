@@ -5,40 +5,40 @@ body, html { height:100%; font-family: Arial, sans-serif; }
 /* Background image */
 .background {
   position: fixed;
-  inset:0;
-  background-image: url('Images/another attempt.jpeg'); 
+  inset: 0;
+  background-image: url('Images/another attempt.jpeg'); /* Replace with your crowd photo */
   background-size: cover;
   background-position: center;
   z-index: -1;
 }
 
-/* Main card: centered, 75% white, with side/top margins */
+/* Main Card */
 .main-card {
-  width: calc(100% - 3in); /* leaves 1.5in each side */
+  width: calc(100% - 3in); /* leaves 1.5in left/right */
   max-width: 1100px;
   margin: 2rem auto; /* top spacing */
   background: rgba(255,255,255,0.75);
   border-radius: 12px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   gap: 20px;
-  border: 2px solid rgba(0,0,0,0.2); /* visible border */
+  border: 2px solid rgba(0,0,0,0.2);
 }
 
-/* Top section */
-.top-section {
+/* Top row: profile + logo */
+.top-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* Profile section */
-.profile-area {
+.profile-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .profile-pic {
   width: 84px;
   height: 84px;
@@ -46,17 +46,21 @@ body, html { height:100%; font-family: Arial, sans-serif; }
   border: 2px solid white;
   object-fit: cover;
 }
-.links a { text-decoration:none; font-weight:bold; color:black; }
+
+.links a {
+  text-decoration:none;
+  font-weight:bold;
+  color:black;
+}
 .links { font-size: 0.9rem; }
 
-/* Logo section */
-.logo-area img {
+.logo-section img {
   height: 84px;
   object-fit: contain;
 }
 
-/* Bottom section */
-.bottom-section {
+/* Bottom row: left vertical, right horizontal */
+.bottom-row {
   display: flex;
   gap: 20px;
 }
@@ -69,12 +73,11 @@ body, html { height:100%; font-family: Arial, sans-serif; }
   flex: 0 0 300px; /* fixed width */
 }
 
-/* Right column */
 .right-column {
   flex: 1;
 }
 
-/* Boxes inside card */
+/* Boxes */
 .box {
   background: rgba(255,255,255,0.5);
   border-radius: 8px;
@@ -82,8 +85,10 @@ body, html { height:100%; font-family: Arial, sans-serif; }
   border: 1px solid rgba(0,0,0,0.2); /* visible */
 }
 
-/* Staff box */
-.staff-box ul { list-style:none; margin-top:5px; }
+.staff-box ul {
+  list-style: none;
+  margin-top: 5px;
+}
 .staff-box li { margin-bottom:5px; font-size:0.9rem; }
 
 /* Albums box */
