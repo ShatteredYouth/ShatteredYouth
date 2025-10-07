@@ -1,85 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Music / Staff Recommendations</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Page</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Replace 'crowd.jpg' with your crowd photo -->
-  <div class="page-bg" style="background-image: url('Images/another attempt.jpeg')"></div>
 
-  <main class="stage">
-    <section class="card">
-      <header class="card-top">
-        <div class="profile-block">
-          <img class="profile-pic" src="Images/IMG_4150.jpeg" alt="Profile picture" />
-          <nav class="quick-links" aria-label="quick links">
-            <a href="#">view: junkpile</a>
-            <span class="sep">|</span>
-            <a href="#">Videos</a>
-            <span class="sep">|</span>
-            <a href="#">music</a>
-          </nav>
+  <!-- Background -->
+  <div class="background"></div>
+
+  <!-- Main card -->
+  <div class="main-card">
+    
+    <!-- Top section: Profile left, Logo right -->
+    <div class="top-section">
+      <div class="profile-area">
+        <img src="Images/IMG_4150.jpeg" alt="Profile Picture" class="profile-pic">
+        <div class="links">
+          <a href="#">view: junkpile</a> | 
+          <a href="#">Videos</a> | 
+          <a href="#">music</a>
         </div>
-
-        <div class="logo-block">
-          <!-- Replace 'logo.png' with your logo -->
-          <img class="logo" src="Images/text-1758662012835.png" alt="Site logo" />
-        </div>
-      </header>
-
-      <div class="card-body">
-        <aside class="left-column">
-          <div class="follow-card">
-            <h4>Follow my pages</h4>
-            <p><a href="#">Letterboxd</a>, <a href="#">Instagram</a></p>
-          </div>
-
-          <div class="staff-recs">
-            <h4>Staff recommendations</h4>
-            <ul>
-              <li><strong>Destroy the Machines</strong> — Earth Crisis</li>
-              <li><strong>Under the Knife</strong> — Hatebreed</li>
-              <li><strong>Straight Edge Revenge</strong> — Project X</li>
-              <li><strong>Break Down the Walls</strong> — Youth of Today</li>
-            </ul>
-          </div>
-        </aside>
-
-        <section class="right-column">
-          <div class="albums-card">
-            <h4>Albums of the Year (so far)</h4>
-            <div class="albums-grid">
-              <!-- Put album cover thumbnails here -->
-              <div class="album">
-                <img src="Images/harcourt-no-excuses-Cover-Art_8e90c04f-6f3a-40e4-9214-0dbe3907369e.webp" alt="Album 1" />
-                <p class="album-title">No Excuses - Harcourt</p>
-              </div>
-              <div class="album">
-                <img src="Images/xx.jpg" alt="Album 2" />
-                <p class="album-title">Demo 2 - XweaponX</p>
-              </div>
-              <div class="album">
-                <img src="Images/ingrown.jpg" alt="Album 3" />
-                <p class="album-title">Idaho- Ingrown</p>
-              </div>
-            </div>
-
-            <div class="albums-blurb">
-              <p>
-                All the EPs and Albums that have dropped so far are amazing. Please check in again soon to see who might take the top spot!
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
-    </section>
-  </main>
+      <div class="logo-area">
+        <img src="Images/text-1758662012835.png" alt="Logo" class="logo-img">
+      </div>
+    </div>
 
-  <footer class="page-footer" aria-hidden="true">
-    <!-- small unobtrusive footer if you want -->
-  </footer>
+    <!-- Bottom section: Left vertical box, Right horizontal box -->
+    <div class="bottom-section">
+      
+      <!-- Left column -->
+      <div class="left-column">
+        <div class="box follow-box">
+          <h4>Follow my pages:</h4>
+          <p><a href="#">Letterboxd</a>, <a href="#">Instagram</a></p>
+        </div>
+        <div class="box staff-box">
+          <h4>Staff Recommendations:</h4>
+          <ul>
+            <li>Destroy the Machines — Earth Crisis</li>
+            <li>Under the Knife — Hatebreed</li>
+            <li>Straight Edge Revenge — Project X</li>
+            <li>Break Down the Walls — Youth of Today</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="right-column">
+        <div class="box albums-box">
+          <h4>Albums & EPs of the Year so far</h4>
+          <div class="albums-grid">
+            <div class="album">
+              <img src="Images/harcourt-no-excuses-Cover-Art_8e90c04f-6f3a-40e4-9214-0dbe3907369e.webp" alt="Album 1">
+              <p>No Excuses - Harcourt</p>
+            </div>
+            <div class="album">
+              <img src="Images/ingrown.jpg" alt="Album 2">
+              <p>Idaho - Ingrown</p>
+            </div>
+            <div class="album">
+              <img src="Images/xx.jpg" alt="Album 3">
+              <p>Demo 2 - XweaponX</p>
+            </div>
+          </div>
+          <p class="blurb">I highly recommend all these Eps and Albums for everyone its peak.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
+
