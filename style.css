@@ -57,3 +57,35 @@ body {
   padding: 15px;
   border-radius: 8px;
 }
+
+body {
+  background: url("your-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main translucent box */
+.main-box {
+  background: rgba(255,255,255,0.5);
+  max-width: 900px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Content box inside */
+.content-box {
+  background: rgba(255,255,255,0.75);
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Nav + active link */
+.nav-links a.active {
+  text-decoration: underline;
+  color: red;
+}
+
