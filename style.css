@@ -1,215 +1,200 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
 
-/* Full background image */
-body {
-  background-image: url("Images/another attempt.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* Logo box */
-.logo-box {
+/* Background crowd photo (full bleed) */
+.page-bg {
   position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 10px;
-  border-radius: 8px;
-  z-index: 10;
-}
-.logo-box img {
-  width: 100px;
-  height: auto;
-}
-
-/* Main content box */
-.main-box {
-  background-color: rgba(255, 255, 255, 0.5);
-  max-width: 900px;
-  margin: 120px auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Navigation links */
-.nav-links {
-  margin-bottom: 20px;
-}
-.nav-links a {
-  margin-right: 20px;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* Inner content box */
-.content-box {
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 15px;
-  border-radius: 8px;
-}
-
-body {
-  background: url("Images/another attempt.jpeg") no-repeat center center fixed;
+  inset: 0;
   background-size: cover;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-position: center center;
+  filter: none; /* You can use blur or darken if desired */
+  z-index: -2;
 }
 
-/* Main translucent box */
-.main-box {
-  background: rgba(255,255,255,0.5);
-  max-width: 900px;
-  margin: 100px auto;
-  padding: 20px;
-  border-radius: 10px;
+/* Optional subtle overlay to help card legibility (keeps photo visible) */
+.page-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.15);
 }
 
-/* Content box inside */
-.content-box {
-  background: rgba(255,255,255,0.75);
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-/* Nav + active link */
-.nav-links a.active {
-  text-decoration: underline;
-  color: red;
-}
-
-.nav-links {
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.nav-links .view-label {
-  color: black;
-  margin-right: 10px;
-}
-
-.nav-links a {
-  margin-right: 15px;
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: red; /* hover color */
-}
-
-.nav-links a.active {
-  text-decoration: underline;
-  color: red; /* highlight current page */
-}
-
-/* Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Georgia", serif;
-  background: url("Images/another attempt.jpeg") no-repeat center center fixed;
-  background-size: cover;
-  color: #000;
-  padding: 40px 0;
-}
-
-/* Header title */
-.site-title {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.75);
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 4px;
-  margin: 0 auto 20px;
-  font-size: 1.2rem;
-}
-.site-title h1 {
-  font-family: "Times New Roman", cursive;
-  font-weight: normal;
-}
-
-/* Main translucent content box */
-.main-box {
-  background: rgba(255, 255, 255, 0.5);
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Navigation links */
-.nav-links {
-  text-align: center;
-  margin-bottom: 30px;
-  font-style: italic;
-  font-size: 1.1rem;
-}
-.nav-links a {
-  color: black;
-  text-decoration: none;
-  margin: 0 5px;
-}
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* Reviews layout */
-.reviews {
+/* Stage centers the main card while keeping top clear space & 1.5in side gutters */
+.stage {
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  align-items: flex-start; /* keep top space visible */
+  justify-content: center;
+  padding-top: 2in; /* top clear space so you can see the photo above the card */
+  padding-bottom: 2rem;
 }
 
-/* Each review card */
-.review-card {
-  background: rgba(255, 255, 255, 0.75);
-  width: 30%;
-  min-width: 250px;
-  padding: 15px;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+/* Big translucent white rectangle */
+.card {
+  width: calc(100% - 3in); /* leaves 1.5in on each side */
+  max-width: 1100px; /* prevents card getting huge on very wide screens */
+  background: rgba(255,255,255,0.75); /* 75% opacity white */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  backdrop-filter: blur(2px); /* subtle blur of background behind card */
 }
 
-.review-card img {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 10px;
+/* Top area with profile (left) and logo (right) */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 18px;
 }
 
-.review-card p {
-  font-family: "Georgia", serif;
+/* Profile block */
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Small circle profile picture in top-left */
+.profile-pic {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.9);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Quick links directly under the profile picture */
+.quick-links {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   font-size: 0.95rem;
-  line-height: 1.5;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111;
+}
+.quick-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+.quick-links .sep { color: rgba(0,0,0,0.5); }
+
+/* Logo on the right */
+.logo-block { display:flex; align-items:center; justify-content:flex-end; width: 35%; min-width: 160px; }
+.logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 84px;
 }
 
-/* Responsive */
+/* Card body with two columns */
+.card-body {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* left column narrow, right column flexible */
+  gap: 22px;
+  align-items: start;
+}
+
+/* Left column stack */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Vertical white rectangle (50% transparency) for follow my pages */
+.follow-card {
+  background: rgba(255,255,255,0.5);
+  padding: 14px;
+  border-radius: 8px;
+  min-height: 90px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.follow-card h4 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+.follow-card p { font-size: 0.92rem; }
+.follow-card a { font-weight:700; text-decoration:none; color:#111; }
+
+/* Staff recommendations — sits under the follow-card */
+.staff-recs {
+  background: transparent;
+  padding: 8px 6px;
+}
+.staff-recs h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+.staff-recs ul {
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+.staff-recs li { font-size: 0.92rem; }
+
+/* Right column — horizontal/landscape card for albums + blurb */
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Albums card (50% transparency) */
+.albums-card {
+  background: rgba(255,255,255,0.5);
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 180px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Grid of album thumbnails inside */
+.albums-grid {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.album {
+  width: 100px;
+  text-align: center;
+}
+.album img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+.album-title {
+  font-size: 0.82rem;
+  margin-top: 6px;
+}
+
+/* Albums blurb */
+.albums-blurb p {
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+/* Responsive tweaks */
 @media (max-width: 900px) {
-  .reviews {
-    flex-direction: column;
-    align-items: center;
-  }
-  .review-card {
-    width: 80%;
-  }
+  .card { width: calc(100% - 1.5rem); padding: 20px; }
+  .card-body { grid-template-columns: 1fr; }
+  .logo-block { width: auto; justify-content:flex-start; margin-top: 8px; }
+  .profile-pic { width: 68px; height: 68px; }
+  .albums-grid { overflow-x: auto; }
+}
+
+@media (max-width: 520px) {
+  .profile-pic { width: 56px; height: 56px; }
+  .albums-grid .album { width: 84px; }
+  .stage { padding-top: 1.2in; }
 }
