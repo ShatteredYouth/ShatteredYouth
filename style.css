@@ -1,29 +1,32 @@
 /* Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
-body, html { height:100%; font-family: Arial, sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { height: 100%; font-family: Arial, sans-serif; }
 
 /* Background image */
-.background {
-  position: fixed;
-  inset: 0;
-  background-image: url('Images/another attempt.jpeg'); /* Replace with your crowd photo */
+body {
+  background-image: url('Images/another attempt.jpeg'); /* Replace with your photo */
   background-size: cover;
   background-position: center;
-  z-index: -1;
 }
 
-/* Main Card */
+/* Main page container */
+.page-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1.5in; /* top + side margins */
+}
+
+/* Big white card */
 .main-card {
-  width: calc(100% - 3in); /* leaves 1.5in left/right */
+  width: 100%;
   max-width: 1100px;
-  margin: 2rem auto; /* top spacing */
   background: rgba(255,255,255,0.75);
+  padding: 30px;
   border-radius: 12px;
-  padding: 20px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 20px;
-  border: 2px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 /* Top row: profile + logo */
@@ -43,23 +46,22 @@ body, html { height:100%; font-family: Arial, sans-serif; }
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  border: 2px solid white;
   object-fit: cover;
+  border: 2px solid white;
 }
 
 .links a {
-  text-decoration:none;
-  font-weight:bold;
-  color:black;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
 }
-.links { font-size: 0.9rem; }
 
 .logo-section img {
   height: 84px;
   object-fit: contain;
 }
 
-/* Bottom row: left vertical, right horizontal */
+/* Bottom row */
 .bottom-row {
   display: flex;
   gap: 20px;
@@ -70,29 +72,68 @@ body, html { height:100%; font-family: Arial, sans-serif; }
   display: flex;
   flex-direction: column;
   gap: 15px;
-  flex: 0 0 300px; /* fixed width */
+  flex: 0 0 300px;
 }
 
+/* Right column */
 .right-column {
   flex: 1;
 }
 
-/* Boxes */
+/* Boxes styling */
 .box {
   background: rgba(255,255,255,0.5);
   border-radius: 8px;
-  padding: 10px;
-  border: 1px solid rgba(0,0,0,0.2); /* visible */
+  padding: 15px;
+  border: 1px solid rgba(0,0,0,0.2);
 }
 
-.staff-box ul {
-  list-style: none;
-  margin-top: 5px;
+/* Staff box */
+.staff-box ul { 
+  list-style: none; 
+  margin-top: 5px; 
 }
-.staff-box li { margin-bottom:5px; font-size:0.9rem; }
+.staff-box li { 
+  margin-bottom:5px; 
+  font-size:0.95rem; 
+}
 
 /* Albums box */
-.albums-grid { display: flex; gap: 10px; margin-bottom:10px; }
-.album { text-align: center; }
-.album img { width: 100px; height:100px; object-fit:cover; border-radius:6px; }
-.blurb { font-size:0.9rem; }
+.albums-grid { 
+  display: flex; 
+  gap: 15px; 
+  margin-bottom: 10px; 
+}
+.album { 
+  text-align: center; 
+}
+.album img { 
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover; 
+  border-radius: 6px; 
+}
+.blurb { 
+  font-size: 0.9rem; 
+}
+
+/* Links styling */
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bottom-row {
+    flex-direction: column;
+  }
+  .left-column {
+    flex: 1;
+  }
+  .right-column {
+    flex: 1;
+  }
+}
