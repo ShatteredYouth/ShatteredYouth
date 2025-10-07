@@ -1,29 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shattered Youth</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Music / Staff Recommendations</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="logo-box">
-    <img src="your-logo.png" alt="Zine Logo">
-  </div>
+  <!-- Replace 'crowd.jpg' with your crowd photo -->
+  <div class="page-bg" style="background-image: url('crowd.jpg')"></div>
 
-  <div class="main-box">
-    <nav class="nav-links">
-  <span class="view-label">View:</span>
-  <a href="index.html">Home</a>
-  <a href="junkpile.html">Junkpile</a>
-  <a href="videos.html">Videos</a>
-  <a href="Music-reviews.html">Music Reviews</a>
-</nav>
+  <main class="stage">
+    <section class="card">
+      <header class="card-top">
+        <div class="profile-block">
+          <img class="profile-pic" src="profile.jpg" alt="Profile picture" />
+          <nav class="quick-links" aria-label="quick links">
+            <a href="#">view: junkpile</a>
+            <span class="sep">|</span>
+            <a href="#">Videos</a>
+            <span class="sep">|</span>
+            <a href="#">music</a>
+          </nav>
+        </div>
 
-    <div class="content-box">
-      <h2>Test Review</h2>
-      <p>This is a test paragraph to confirm visibility.</p>
-    </div>
-  </div>
+        <div class="logo-block">
+          <!-- Replace 'logo.png' with your logo -->
+          <img class="logo" src="logo.png" alt="Site logo" />
+        </div>
+      </header>
+
+      <div class="card-body">
+        <aside class="left-column">
+          <div class="follow-card">
+            <h4>Follow my pages</h4>
+            <p><a href="#">Letterboxd</a>, <a href="#">Instagram</a></p>
+          </div>
+
+          <div class="staff-recs">
+            <h4>Staff recommendations</h4>
+            <ul>
+              <li><strong>Destroy the Machines</strong> — Earth Crisis</li>
+              <li><strong>Under the Knife</strong> — Hatebreed</li>
+              <li><strong>Straight Edge Revenge</strong> — Project X</li>
+              <li><strong>Break Down the Walls</strong> — Youth of Today</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="right-column">
+          <div class="albums-card">
+            <h4>Albums of the Year (so far)</h4>
+            <div class="albums-grid">
+              <!-- Put album cover thumbnails here -->
+              <div class="album">
+                <img src="album1.jpg" alt="Album 1" />
+                <p class="album-title">Album 1 — Artist</p>
+              </div>
+              <div class="album">
+                <img src="album2.jpg" alt="Album 2" />
+                <p class="album-title">Album 2 — Artist</p>
+              </div>
+              <div class="album">
+                <img src="album3.jpg" alt="Album 3" />
+                <p class="album-title">Album 3 — Artist</p>
+              </div>
+            </div>
+
+            <div class="albums-blurb">
+              <p>
+                Quick blurb about the albums so far — standout releases, short notes,
+                and why they matter this year.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer" aria-hidden="true">
+    <!-- small unobtrusive footer if you want -->
+  </footer>
 </body>
 </html>
