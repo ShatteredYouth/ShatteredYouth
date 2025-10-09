@@ -208,10 +208,11 @@ a:hover {
 }
  /* Music Review Page Styles */
 body.music-review-page {
-  background-image: url('crowd.jpg'); /* same as main page */
+  background-image: url('Images/another attempt.jpeg'); /* use same working image */
   background-size: cover;
   background-position: center;
 }
+
 
 /* Page container */
 .music-review-container {
