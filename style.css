@@ -302,3 +302,36 @@ body.music-review-page {
     max-width: 400px;
   }
 }
+
+/* --- Navigation Bar (Shared Style) --- */
+.music-nav {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.music-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.music-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.music-nav a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
