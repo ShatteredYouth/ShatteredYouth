@@ -402,7 +402,7 @@ body.music-review-page {
 
 /* --- Junkpile Logo Sizing --- */
 .junkpile-logo {
-  width: 200px;           /* adjust as needed */
+  width: 150px;           /* adjust as needed */
   max-width: 80%;
   height: auto;
   margin: 0 auto;
