@@ -438,11 +438,10 @@ body.junkpile-page {
 }
 
 /* === UNIFORM LOGO STYLING FOR ALL PAGES === */
-.logo-section img,
 .music-logo-img,
 .junkpile-logo,
 .videos-logo {
-  width: 250px;          /* Consistent logo size */
+  width: 300px;          /* Consistent logo size */
   max-width: 80%;
   height: auto;
   display: block;
