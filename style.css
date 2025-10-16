@@ -562,3 +562,81 @@ body.junkpile-page {
     font-size: 1rem;
   }
 }
+
+/* === MOBILE OPTIMIZATION FIX — STOPS BOX FROM CRUSHING === */
+@media (max-width: 900px) {
+  /* Let content breathe */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .page-container {
+    padding: 0.5rem; /* remove huge side insets */
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Force main boxes to take full width */
+  .main-card,
+  .music-main-card,
+  .junkpile-main-card {
+    width: 100%;
+    max-width: 95%;
+    min-width: unset;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  /* Center logo and keep size reasonable */
+  .music-logo-img,
+  .junkpile-logo,
+  .videos-logo {
+    width: 180px;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Videos layout */
+  .videos-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .video-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 280px;
+  }
+
+  /* General text */
+  .page-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* Navigation */
+  .music-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .music-nav li a {
+    font-size: 0.9rem;
+  }
+}
+
